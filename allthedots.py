@@ -5,7 +5,7 @@ import os
 import argparse
 import subprocess
 
-XDG_CONF_DIR = os.environ.get('XDG_CONFIG_HOME') or os.environ.get('HOME')
+XDG_CONF_DIR = os.environ.get('XDG_CONFIG_HOME') or os.path.join(os.environ.get('HOME'), '.config')
 CONF_DIR = os.path.join(XDG_CONF_DIR, 'AllTheDots')
 DOT_LIST = os.path.join(CONF_DIR, 'savelist.txt')
 

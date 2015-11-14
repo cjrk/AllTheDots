@@ -20,7 +20,7 @@ def command_add(stuffList, paths):
 	with open(stuffList, 'a+') as f:
 		dotlist = [s.strip() for s in f.readlines()]
 		for i in abs_paths:
-			parents = [s for s in dotlist if i.startswith(s)]
+			parents = [os.path.join(s,'') for s in dotlist if i.startswith(s)]
 			if len(parents) == 0:
 				f.write(i+'\n')
 				print '{dotpath} added to {dotlistfile}'.format(dotpath=i, dotlistfile=stuffList)

@@ -4,9 +4,11 @@
 from setuptools import setup, find_packages
 
 setup(name="allthedots",
-      version="0.1.3",
+      version="0.1.4",
       author="Christian Jurke",
+      author_email="christian.jurke@gmail.com",
       description="Make a list of important stuff.",
+      url="https://github.com/cjrk/AllTheDots",
 
       py_modules = ['allthedots'],
       entry_points={

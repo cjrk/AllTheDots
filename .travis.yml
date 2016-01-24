@@ -1,5 +1,8 @@
 language: python
 script: true
+before_deploy:
+  - pip install gitchangelog
+  - gitchangelog > changelog.rst
 deploy:
   provider: pypi
   user: cjrk

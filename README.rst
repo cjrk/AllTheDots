@@ -5,7 +5,7 @@ This is a small script I use to make regular backups of my config-files.
 
 Add ``/home/user/.ssh`` to the backup-list at ``<XDG_CONF>/AllTheDots/savelist.txt``::
 
-	$ atd add /home/user/.config
+	$ atd add /home/user/.ssh
 
 Copy all files in the backup-list via rsync::
 

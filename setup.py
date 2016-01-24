@@ -4,7 +4,7 @@
 from setuptools import setup, find_packages
 
 setup(name="allthedots",
-      version="0.1.8",
+      version="0.1.9",
       author="Christian Jurke",
       author_email="christian.jurke@gmail.com",
       description="Make a list of important stuff.",

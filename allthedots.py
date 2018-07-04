@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import os
@@ -23,9 +23,9 @@ def command_add(stuffList, paths):
 			parents = [s for s in dotlist if i.startswith(os.path.join(s,''))]
 			if len(parents) == 0:
 				f.write(i+'\n')
-				print '{dotpath} added to {dotlistfile}'.format(dotpath=i, dotlistfile=stuffList)
+				print('{dotpath} added to {dotlistfile}'.format(dotpath=i, dotlistfile=stuffList))
 			else:
-				print '{dotlistfile} already contains {parents}'.format(dotlistfile=stuffList, parents=' and '.join(parents))
+				print('{dotlistfile} already contains {parents}'.format(dotlistfile=stuffList, parents=' and '.join(parents)))
 
 
 def command_backup(stuffList, target):
@@ -48,8 +48,11 @@ def main():
 	parser_backup.set_defaults(func=command_backup, args=lambda x: (DOT_LIST, x.target))
 
 	# parse args
-	args = parser.parse_args()
-	args.func(*args.args(args))
+	try:
+		args = parser.parse_args()
+		args.func(*args.args(args))
+	except AttributeError as e:
+		parser.print_help()
 	
 
 

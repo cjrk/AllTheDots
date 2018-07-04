@@ -1,10 +1,10 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 from setuptools import setup, find_packages
 
 setup(name="allthedots",
-      version="0.1.8",
+      version="0.2.0",
       author="Christian Jurke",
       author_email="christian.jurke@gmail.com",
       description="Make a list of important stuff.",
